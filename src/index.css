@@ -1,0 +1,107 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─── Base Reset ──────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: auto; /* Lenis handles smooth scroll */
+  font-size: 16px;
+}
+
+body {
+  font-family: 'Inter', Helvetica Neue, sans-serif;
+  background-color: #FAF8F4;
+  color: #1a1a1a;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ─── Selection ───────────────────────────────── */
+::selection {
+  background: #5C4033;
+  color: #F5F5DC;
+}
+
+/* ─── Scrollbar ───────────────────────────────── */
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: #FAF8F4;
+}
+::-webkit-scrollbar-thumb {
+  background: #5C4033;
+  border-radius: 2px;
+}
+
+/* ─── Typography ──────────────────────────────── */
+.font-serif {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+}
+
+/* ─── Lenis ───────────────────────────────────── */
+html.lenis {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto;
+}
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+/* ─── Utility Classes ─────────────────────────── */
+.luxury-border {
+  border-bottom: 1px solid rgba(92, 64, 51, 0.15);
+}
+
+.btn-luxury {
+  @apply inline-block font-sans text-xs tracking-widest uppercase px-8 py-4 border border-current transition-all duration-500;
+  letter-spacing: 0.25em;
+}
+
+.btn-luxury:hover {
+  @apply bg-brand-brown text-brand-white border-brand-brown;
+}
+
+.btn-luxury-light {
+  @apply inline-block font-sans text-xs tracking-widest uppercase px-8 py-4 border border-brand-white text-brand-white transition-all duration-500;
+  letter-spacing: 0.25em;
+}
+
+.btn-luxury-light:hover {
+  @apply bg-brand-white text-brand-brown;
+}
+
+/* ─── Image Zoom Hover ────────────────────────── */
+.img-zoom-wrapper {
+  overflow: hidden;
+}
+.img-zoom-wrapper img {
+  transition: transform 0.8s cubic-bezier(0.25, 0.1, 0.25, 1.0);
+  will-change: transform;
+}
+.img-zoom-wrapper:hover img {
+  transform: scale(1.05);
+}
+
+/* ─── Section Reveal ──────────────────────────── */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+/* ─── Thin Horizontal Line ────────────────────── */
+.line-accent {
+  width: 40px;
+  height: 1px;
+  background: #5C4033;
+  display: inline-block;
+}
