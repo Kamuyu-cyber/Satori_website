@@ -5,12 +5,12 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 gsap.registerPlugin(ScrollTrigger)
 
 const galleryItems = [
-    { image: '/images/2.jpg', span: 'tall', alt: 'Satori lookbook 1' },
-    { image: '/images/4.jpg', span: 'normal', alt: 'Satori lookbook 2' },
-    { image: '/images/Chikara_12.jpg', span: 'normal', alt: 'Satori lookbook 3' },
-    { image: '/images/chikara_12.jpg', span: 'tall', alt: 'Satori lookbook 4' },
-    { image: '/images/Chikara_snow(sw).jpg', span: 'normal', alt: 'Satori lookbook 5' },
-    { image: '/images/satori_12(2).jpg', span: 'normal', alt: 'Satori lookbook 6' },
+    { image: '/images/2.jpg', alt: 'Satori lookbook 1' },
+    { image: '/images/4.jpg', alt: 'Satori lookbook 2' },
+    { image: '/images/Chikara_12.jpg', alt: 'Satori lookbook 3' },
+    { image: '/images/chikara_12.jpg', alt: 'Satori lookbook 4' },
+    { image: '/images/Chikara_snow(sw).jpg', alt: 'Satori lookbook 5' },
+    { image: '/images/satori_12(2).jpg', alt: 'Satori lookbook 6' },
 ]
 
 export default function Lookbook() {
@@ -58,14 +58,12 @@ export default function Lookbook() {
                 {galleryItems.map((item, idx) => (
                     <div
                         key={idx}
-                        className={`gallery-item img-zoom-wrapper group relative overflow-hidden cursor-pointer ${item.span === 'tall' ? 'row-span-2' : ''
-                            }`}
-                        style={{ aspectRatio: item.span === 'tall' ? '3/4' : '4/5' }}
+                        className="gallery-item img-zoom-wrapper group relative overflow-hidden cursor-pointer aspect-[4/5]"
                     >
                         <img
                             src={item.image}
                             alt={item.alt}
-                            className="w-full h-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-105"
+                            className="w-full h-full object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105"
                             loading="lazy"
                         />
                         {/* Hover overlay */}
