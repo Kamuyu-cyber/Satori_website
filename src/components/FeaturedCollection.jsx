@@ -86,7 +86,7 @@ export default function FeaturedCollection() {
                         onClick={() => navigate(`/product/${product.id}`)}
                     >
                         {/* Image */}
-                        <div className="img-zoom-wrapper relative aspect-[3/4] bg-brand-beige overflow-hidden mb-4">
+                        <div className={`img-zoom-wrapper relative aspect-[3/4] bg-brand-beige overflow-hidden mb-4 ${product.soldOut ? 'opacity-70' : ''}`}>
                             <img
                                 src={product.image}
                                 alt={product.name}
@@ -94,18 +94,26 @@ export default function FeaturedCollection() {
                                 loading="lazy"
                             />
                             {/* Tag */}
-                            <span className="absolute top-4 left-4 font-sans text-[10px] tracking-widest uppercase bg-brand-white/90 text-brand-brown px-3 py-1">
-                                {product.tag}
-                            </span>
-                            {/* Hover CTA */}
-                            <div className="absolute inset-0 flex items-end justify-center pb-6 opacity-0 group-hover:opacity-100 transition-opacity duration-400">
-                                <button
-                                    onClick={(e) => { e.stopPropagation(); navigate(`/product/${product.id}`) }}
-                                    className="font-sans text-xs tracking-widest uppercase bg-brand-white/95 text-brand-brown px-8 py-3 hover:bg-brand-brown hover:text-white transition-colors duration-300"
-                                >
-                                    Quick View
-                                </button>
-                            </div>
+                            {product.soldOut ? (
+                                <span className="absolute top-4 left-4 font-sans text-[10px] tracking-widest uppercase bg-brand-brown text-white px-3 py-1">
+                                    Sold Out
+                                </span>
+                            ) : (
+                                <span className="absolute top-4 left-4 font-sans text-[10px] tracking-widest uppercase bg-brand-white/90 text-brand-brown px-3 py-1">
+                                    {product.tag}
+                                </span>
+                            )}
+                            {/* Hover CTA — only for in-stock */}
+                            {!product.soldOut && (
+                                <div className="absolute inset-0 flex items-end justify-center pb-6 opacity-0 group-hover:opacity-100 transition-opacity duration-400">
+                                    <button
+                                        onClick={(e) => { e.stopPropagation(); navigate(`/product/${product.id}`) }}
+                                        className="font-sans text-xs tracking-widest uppercase bg-brand-white/95 text-brand-brown px-8 py-3 hover:bg-brand-brown hover:text-white transition-colors duration-300"
+                                    >
+                                        Quick View
+                                    </button>
+                                </div>
+                            )}
                         </div>
 
                         {/* Info */}
@@ -114,13 +122,17 @@ export default function FeaturedCollection() {
                                 <h3 className="font-serif text-lg text-brand-brown font-light leading-tight mb-1 group-hover:opacity-70 transition-opacity">
                                     {product.name}
                                 </h3>
-                                <p className="font-sans text-xs text-brand-brown/60 tracking-wide">
+                                <p className={`font-sans text-xs tracking-wide ${product.soldOut ? 'text-brand-brown/40 line-through' : 'text-brand-brown/60'}`}>
                                     {product.price}
                                 </p>
+                                {product.soldOut && (
+                                    <p className="font-sans text-[10px] tracking-widest uppercase text-brand-brown/50 mt-0.5">Sold Out</p>
+                                )}
                             </div>
                             <button
                                 onClick={(e) => { e.stopPropagation(); navigate(`/product/${product.id}`) }}
-                                className="mt-1 w-7 h-7 flex items-center justify-center border border-brand-brown/20 text-brand-brown/50 hover:border-brand-brown hover:text-brand-brown transition-colors text-lg font-light flex-shrink-0"
+                                disabled={product.soldOut}
+                                className="mt-1 w-7 h-7 flex items-center justify-center border border-brand-brown/20 text-brand-brown/50 hover:border-brand-brown hover:text-brand-brown transition-colors text-lg font-light flex-shrink-0 disabled:opacity-30 disabled:cursor-not-allowed"
                             >
                                 +
                             </button>

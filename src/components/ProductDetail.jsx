@@ -66,8 +66,11 @@ export default function ProductDetail() {
                     {/* Product Info */}
                     <div className="flex flex-col gap-6 md:gap-8 md:py-8">
                         {/* Tag */}
-                        <span className="font-sans text-[10px] tracking-widest uppercase text-brand-brown/50 border border-brand-brown/20 self-start px-3 py-1">
-                            {product.tag}
+                        <span className={`font-sans text-[10px] tracking-widest uppercase self-start px-3 py-1 ${product.soldOut
+                                ? 'bg-brand-brown text-white border border-brand-brown'
+                                : 'text-brand-brown/50 border border-brand-brown/20'
+                            }`}>
+                            {product.soldOut ? 'Sold Out' : product.tag}
                         </span>
 
                         {/* Name & Price */}
@@ -75,9 +78,12 @@ export default function ProductDetail() {
                             <h1 className="font-serif text-3xl md:text-4xl lg:text-5xl font-light text-brand-brown leading-tight mb-3">
                                 {product.name}
                             </h1>
-                            <p className="font-sans text-lg md:text-xl text-brand-brown/70 tracking-wide">
+                            <p className={`font-sans text-lg md:text-xl tracking-wide ${product.soldOut ? 'text-brand-brown/40 line-through' : 'text-brand-brown/70'}`}>
                                 {product.price}
                             </p>
+                            {product.soldOut && (
+                                <p className="font-sans text-xs tracking-widest uppercase text-brand-brown/60 mt-1">This item is sold out</p>
+                            )}
                         </div>
 
                         {/* Divider */}
@@ -99,8 +105,8 @@ export default function ProductDetail() {
                                         key={size}
                                         onClick={() => setSelectedSize(size)}
                                         className={`w-12 h-12 flex items-center justify-center font-sans text-xs tracking-wide border transition-all duration-300 ${selectedSize === size
-                                                ? 'bg-brand-brown text-white border-brand-brown'
-                                                : 'border-brand-brown/20 text-brand-brown hover:border-brand-brown'
+                                            ? 'bg-brand-brown text-white border-brand-brown'
+                                            : 'border-brand-brown/20 text-brand-brown hover:border-brand-brown'
                                             }`}
                                     >
                                         {size}
@@ -112,12 +118,15 @@ export default function ProductDetail() {
                         {/* Add to Cart */}
                         <button
                             onClick={handleAddToCart}
-                            className={`w-full md:max-w-sm font-sans text-xs tracking-widest uppercase py-4 px-8 transition-all duration-500 ${addedToCart
-                                    ? 'bg-green-800 text-white border border-green-800'
-                                    : 'bg-brand-brown text-white border border-brand-brown hover:bg-transparent hover:text-brand-brown'
+                            disabled={product.soldOut}
+                            className={`w-full md:max-w-sm font-sans text-xs tracking-widest uppercase py-4 px-8 transition-all duration-500 ${product.soldOut
+                                    ? 'bg-brand-brown/20 text-brand-brown/40 border border-brand-brown/20 cursor-not-allowed'
+                                    : addedToCart
+                                        ? 'bg-green-800 text-white border border-green-800'
+                                        : 'bg-brand-brown text-white border border-brand-brown hover:bg-transparent hover:text-brand-brown'
                                 }`}
                         >
-                            {addedToCart ? '✓ Added to Cart' : 'Add to Cart'}
+                            {product.soldOut ? 'Sold Out' : addedToCart ? '✓ Added to Cart' : 'Add to Cart'}
                         </button>
 
                         {/* Wishlist */}

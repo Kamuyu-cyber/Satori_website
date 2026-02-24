@@ -5,6 +5,7 @@ const products = [
         price: 'KES 18,500',
         image: '/images/Chikara_1.jpg',
         tag: 'Signature',
+        soldOut: true,
         description:
             'The Chikara Tapestry Jacket is our signature piece — a bold, handcrafted jacket woven from rich tapestry fabric sourced from East African markets. The relaxed oversized fit meets structured shoulders, giving you a silhouette that commands any room. Pair it with tailored trousers or throw it over a simple tee for an effortless statement.',
         details: [
@@ -22,6 +23,7 @@ const products = [
         price: 'KES 9,800',
         image: '/images/chikara_mali.jpg',
         tag: 'New',
+        soldOut: true,
         description:
             'Inspired by the velvet textures found in West African textile traditions, the Mali Velvet Shirt brings understated luxury to everyday wear. Cut from soft-touch velvet with a relaxed collar, this shirt transitions seamlessly from a daytime look to an evening out in Nairobi.',
         details: [
@@ -35,10 +37,11 @@ const products = [
     },
     {
         id: 3,
-        name: 'Chikara Snow Jacket',
-        price: 'KES 21,000',
+        name: 'Chikara Snow',
+        price: 'KES 2,000',
         image: '/images/Chikara_snow.jpg',
         tag: 'Limited',
+        soldOut: false,
         description:
             'A limited-edition piece from the Chikara collection, the Snow Jacket features a pristine white tapestry with intricate floral patterns. Designed for those who appreciate the intersection of heritage craft and modern luxury. Each jacket is individually cut and finished by hand in our Nairobi studio.',
         details: [
@@ -52,10 +55,11 @@ const products = [
     },
     {
         id: 4,
-        name: 'Nia Tapestry Coat',
-        price: 'KES 24,500',
+        name: 'Chikara Nia',
+        price: 'KES 2,000',
         image: '/images/Chikara_Nia.jpg',
         tag: 'New',
+        soldOut: false,
         description:
             'The Nia Tapestry Coat is our most refined outerwear piece — a full-length coat crafted from heavyweight tapestry fabric with a floral motif rooted in Kenyan botanical art. The Nia is designed for presence: structured shoulders, a cinched waist, and a dramatic drape that moves with intention.',
         details: [
@@ -69,10 +73,11 @@ const products = [
     },
     {
         id: 5,
-        name: 'Chikara Level Tee',
-        price: 'KES 5,500',
+        name: 'Chikara Level',
+        price: 'KES 2,700',
         image: '/images/Chikara_Level.jpg',
         tag: 'Essentials',
+        soldOut: false,
         description:
             'The essential Satori tee. The Chikara Level Tee is made from 100% premium Kenyan cotton with a relaxed fit and the signature "Energy Don\'t Lie" embroidery. Built to be your go-to — worn alone or layered under our statement jackets.',
         details: [
@@ -86,18 +91,37 @@ const products = [
     },
     {
         id: 6,
-        name: 'Chikara 12 Denim Set',
-        price: 'KES 16,800',
+        name: 'Chikara 09',
+        price: 'KES 5,000',
         image: '/images/Chikara_9.jpg',
         tag: 'Collection',
+        soldOut: false,
         description:
-            'A co-ord set for the modern Kenyan wardrobe. The Chikara 12 Denim Set features a structured denim jacket with matching wide-leg trousers. Both pieces use premium Japanese selvedge denim, washed to a soft medium blue with subtle distressing for an editorial-ready look.',
+            'A co-ord set for the modern Kenyan wardrobe. The Chikara 09 Denim Set features a structured denim jacket with matching wide-leg trousers. Both pieces use premium Japanese selvedge denim, washed to a soft medium blue with subtle distressing for an editorial-ready look.',
         details: [
             'Japanese selvedge denim',
             'Jacket + wide-leg trousers set',
             'Medium blue wash',
             'Subtle distress detailing',
             'Sold as a set',
+        ],
+        sizes: ['S', 'M', 'L', 'XL'],
+    },
+    {
+        id: 7,
+        name: 'Chikara 12',
+        price: 'KES 6,000',
+        image: '/images/chikara_12.jpg',
+        tag: 'Collection',
+        soldOut: false,
+        description:
+            'The Chikara 12 is a statement piece from our latest collection — a bold tapestry jacket crafted with precision and rooted in Kenyan street culture. Oversized silhouette, premium stitching, and a look that owns any room.',
+        details: [
+            'Premium tapestry fabric',
+            'Oversized silhouette',
+            'Structured shoulders',
+            'Two side pockets',
+            'Dry clean recommended',
         ],
         sizes: ['S', 'M', 'L', 'XL'],
     },
