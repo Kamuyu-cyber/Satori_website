@@ -2,7 +2,7 @@ const products = [
     {
         id: 1,
         name: 'Chikara Tapestry Jacket',
-        price: 'KES 18,500',
+        price: 'KES 9,000',
         image: '/images/Chikara_1.jpg',
         tag: 'Signature',
         soldOut: true,
@@ -20,7 +20,7 @@ const products = [
     {
         id: 2,
         name: 'Mali Velvet Shirt',
-        price: 'KES 9,800',
+        price: 'KES 3,500',
         image: '/images/chikara_mali.jpg',
         tag: 'New',
         soldOut: true,
