@@ -20,13 +20,6 @@ const galleryItems = [
             'Two bodies, one energy. This editorial explores the Satori co-ord worn two ways — the Chikara 12 Denim set styled for an evening moment in the city. The oversized silhouette creates a natural authority.',
     },
     {
-        image: '/images/Chikara_12.jpg',
-        alt: 'Satori lookbook 3',
-        title: 'The Monochrome Moment',
-        description:
-            'Clean lines and a composed palette. The Chikara jacket in its natural state — worn open over a white tee. This look highlights the structure of the sleeve and the quality of the tapestry stitch.',
-    },
-    {
         image: '/images/chikara_12.jpg',
         alt: 'Satori lookbook 4',
         title: 'Chikara Street',
@@ -46,6 +39,13 @@ const galleryItems = [
         title: 'Heritage Craft',
         description:
             'Rooted in craft. This frame captures the Satori ethos — the intersection of Kenyan heritage, modern tailoring, and intentional dressing. Every stitch tells a story.',
+    },
+    {
+        image: '/images/satori_family(2).jpg',
+        alt: 'Satori family lookbook',
+        title: 'The Satori Family',
+        description:
+            'The full cast, the full collection. This is what Satori looks like when every piece comes together — each model wearing a different story, united by the same energy. Family first.',
     },
 ]
 
