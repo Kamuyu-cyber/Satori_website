@@ -9,6 +9,7 @@ import FeaturedCollection from './components/FeaturedCollection'
 import AboutBrand from './components/AboutBrand'
 import Lookbook from './components/Lookbook'
 import Newsletter from './components/Newsletter'
+import Contact from './components/Contact'
 import Footer from './components/Footer'
 import ProductDetail from './components/ProductDetail'
 
@@ -57,6 +58,7 @@ function HomePage() {
                 <AboutBrand />
                 <Lookbook />
                 <Newsletter />
+                <Contact />
             </main>
             <Footer />
         </div>
