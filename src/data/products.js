@@ -125,6 +125,63 @@ const products = [
         ],
         sizes: ['S', 'M', 'L', 'XL'],
     },
+    {
+        id: 8,
+        name: 'Jivu',
+        price: 'KES 3,500',
+        image: '/images/jivu.jpg',
+        tag: 'Jisho',
+        collection: 'Jisho',
+        soldOut: false,
+        description:
+            'From the Jisho collection — Jivu is a refined, everyday essential that blends clean silhouettes with the understated confidence that defines Satori. Crafted for ease and precision, this piece carries quiet authority wherever you wear it.',
+        details: [
+            'Jisho collection exclusive',
+            'Premium fabric construction',
+            'Clean minimalist silhouette',
+            'Relaxed comfortable fit',
+            'Machine washable',
+        ],
+        sizes: ['S', 'M', 'L', 'XL'],
+    },
+    {
+        id: 9,
+        name: 'Kiwi',
+        price: 'KES 4,000',
+        image: '/images/Kiwi.jpg',
+        tag: 'Jisho',
+        collection: 'Jisho',
+        soldOut: false,
+        description:
+            'Kiwi from the Jisho collection is a standout piece — bold in colour, precise in cut. Designed for those who move through the world with intention, this piece brings fresh energy to the Satori aesthetic.',
+        details: [
+            'Jisho collection exclusive',
+            'Vibrant signature colourway',
+            'Structured fit',
+            'Premium fabric blend',
+            'Dry clean recommended',
+        ],
+        sizes: ['S', 'M', 'L', 'XL'],
+    },
+    {
+        id: 10,
+        name: 'Black Denim',
+        price: 'KES 4,500',
+        image: '/images/Black_Denim 1.jpg',
+        tag: 'Jisho',
+        collection: 'Jisho',
+        soldOut: false,
+        description:
+            'The Black Denim from the Jisho collection is raw, effortless cool. A versatile staple built from heavyweight denim with a clean black finish — designed to anchor any look in the Satori wardrobe.',
+        details: [
+            'Jisho collection exclusive',
+            'Heavyweight black denim',
+            'Classic structured silhouette',
+            'Reinforced stitching',
+            'Machine washable at 30°C',
+        ],
+        sizes: ['S', 'M', 'L', 'XL'],
+    },
 ]
 
 export default products
