@@ -30,6 +30,9 @@ export default {
             transitionTimingFunction: {
                 'luxury': 'cubic-bezier(0.25, 0.1, 0.25, 1.0)',
             },
+            transitionDuration: {
+                'luxury': '800ms',
+            },
             keyframes: {
                 marquee: {
                     '0%': { transform: 'translateX(0%)' },

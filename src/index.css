@@ -15,18 +15,13 @@ html {
 }
 
 body {
-  font-family: 'Inter', Helvetica Neue, sans-serif;
-  background-color: #FAF8F4;
-  color: #1a1a1a;
-  overflow-x: hidden;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  @apply font-sans bg-brand-cream text-brand-brown antialiased;
+  overflow-x: hidden; /* Prevent horizontal scroll from reveal animations */
 }
 
 /* ─── Selection ───────────────────────────────── */
 ::selection {
-  background: #5C4033;
-  color: #F5F5DC;
+  @apply bg-brand-brown text-brand-beige;
 }
 
 /* ─── Scrollbar ───────────────────────────────── */
@@ -34,16 +29,10 @@ body {
   width: 4px;
 }
 ::-webkit-scrollbar-track {
-  background: #FAF8F4;
+  @apply bg-brand-cream;
 }
 ::-webkit-scrollbar-thumb {
-  background: #5C4033;
-  border-radius: 2px;
-}
-
-/* ─── Typography ──────────────────────────────── */
-.font-serif {
-  font-family: 'Cormorant Garamond', Georgia, serif;
+  @apply bg-brand-brown rounded-sm;
 }
 
 /* ─── Lenis ───────────────────────────────────── */
@@ -59,12 +48,11 @@ html.lenis {
 
 /* ─── Utility Classes ─────────────────────────── */
 .luxury-border {
-  border-bottom: 1px solid rgba(92, 64, 51, 0.15);
+  @apply border-b border-brand-brown/15;
 }
 
 .btn-luxury {
-  @apply inline-block font-sans text-xs tracking-widest uppercase px-8 py-4 border border-current transition-all duration-500;
-  letter-spacing: 0.25em;
+  @apply inline-block font-sans text-xs tracking-widest-2 uppercase px-8 py-4 border border-current transition-all duration-luxury;
 }
 
 .btn-luxury:hover {
@@ -72,8 +60,7 @@ html.lenis {
 }
 
 .btn-luxury-light {
-  @apply inline-block font-sans text-xs tracking-widest uppercase px-8 py-4 border border-brand-white text-brand-white transition-all duration-500;
-  letter-spacing: 0.25em;
+  @apply inline-block font-sans text-xs tracking-widest-2 uppercase px-8 py-4 border border-brand-white text-brand-white transition-all duration-luxury;
 }
 
 .btn-luxury-light:hover {
@@ -82,26 +69,22 @@ html.lenis {
 
 /* ─── Image Zoom Hover ────────────────────────── */
 .img-zoom-wrapper {
-  overflow: hidden;
+  @apply overflow-hidden;
 }
 .img-zoom-wrapper img {
-  transition: transform 0.8s cubic-bezier(0.25, 0.1, 0.25, 1.0);
+  @apply transition-transform duration-luxury;
   will-change: transform;
 }
 .img-zoom-wrapper:hover img {
-  transform: scale(1.05);
+  @apply scale-105;
 }
 
 /* ─── Section Reveal ──────────────────────────── */
 .reveal {
-  opacity: 0;
-  transform: translateY(40px);
+  @apply opacity-0 translate-y-10;
 }
 
 /* ─── Thin Horizontal Line ────────────────────── */
 .line-accent {
-  width: 40px;
-  height: 1px;
-  background: #5C4033;
-  display: inline-block;
+  @apply w-10 h-px bg-brand-brown inline-block;
 }
