@@ -189,6 +189,26 @@ const products = [
         ],
         sizes: ['S', 'M', 'L', 'XL'],
     },
+    {
+        id: 11,
+        name: 'Mwanzo',
+        price: 'KES 4,500',
+        image: '/images/mwanzo.jpeg',
+        tag: 'Jisho',
+        collection: 'Jisho',
+        soldOut: false,
+        description:
+            'Mwanzo — a fresh beginning. Crafted from premium denim fabric, this piece combines durability with the signature Satori silhouette. A versatile addition to the Jisho collection, designed for those who value both form and function.',
+        details: [
+            'Premium denim fabric',
+            'Classic structured silhouette',
+            'Reinforced stitching',
+            'Versatile everyday wear',
+            'Machine washable at 30°C',
+        ],
+        sizes: ['S', 'M', 'L', 'XL'],
+    },
 ]
+
 
 export default products
