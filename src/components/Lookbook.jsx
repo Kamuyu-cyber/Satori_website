@@ -6,6 +6,27 @@ gsap.registerPlugin(ScrollTrigger)
 
 const galleryItems = [
     {
+        image: '/images/Dooble_Jacket.png',
+        alt: 'Dooble lookbook',
+        title: 'Dooble Utility',
+        description:
+            'Heavyweight utility. The Dooble jacket and structured hat create a silhouette that balances military precision with street-ready ease. Built for the Nairobi explorer who moves with intention.',
+    },
+    {
+        image: '/images/PYE_Tshirt.png',
+        alt: 'PYE lookbook',
+        title: 'PYE Minimalism',
+        description:
+            'Pure minimalism. The PYE T-shirt is a study in texture and drape. Simple, intentional, and crafted from the finest Kenyan cotton for a feel that lasts through every season.',
+    },
+    {
+        image: '/images/Soofi.png',
+        alt: 'Soofi lookbook',
+        title: 'Soofi Heritage',
+        description:
+            'Heritage redefined. The Soofi set brings together tradition and modernity in a coordinated look that commands attention while honoring the craft of the makers. Cohesion in every thread.',
+    },
+    {
         image: '/images/2.jpg',
         alt: 'Satori lookbook 1',
         title: 'The Chikara Edit',
@@ -46,27 +67,6 @@ const galleryItems = [
         title: 'The Satori Family',
         description:
             'The full cast, the full collection. This is what Satori looks like when every piece comes together — each model wearing a different story, united by the same energy. Family first.',
-    },
-    {
-        image: '/images/Dooble_Jacket.png',
-        alt: 'Dooble lookbook',
-        title: 'Dooble Utility',
-        description:
-            'Heavyweight utility. The Dooble jacket and structured hat create a silhouette that balances military precision with street-ready ease. Built for the Nairobi explorer who moves with intention.',
-    },
-    {
-        image: '/images/PYE_Tshirt.png',
-        alt: 'PYE lookbook',
-        title: 'PYE Minimalism',
-        description:
-            'Pure minimalism. The PYE T-shirt is a study in texture and drape. Simple, intentional, and crafted from the finest Kenyan cotton for a feel that lasts through every season.',
-    },
-    {
-        image: '/images/Soofi.png',
-        alt: 'Soofi lookbook',
-        title: 'Soofi Heritage',
-        description:
-            'Heritage redefined. The Soofi set brings together tradition and modernity in a coordinated look that commands attention while honoring the craft of the makers. Cohesion in every thread.',
     },
 ]
 
